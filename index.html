@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variabel CSS untuk konsistensi */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #777;
+            --spacing: 1rem;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset dan gaya dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        hr {
+            display: none;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Header dan Navigasi */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--box-shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            font-weight: normal;
+            font-size: 1rem;
+            position: relative;
+            color: white;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            position: relative;
+        }
+
+        #hero .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        #hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--box-shadow);
+            object-fit: cover;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        #hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+            line-height: 1.6;
+        }
+
+        #hero a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+            animation: fadeIn 2s ease;
+        }
+
+        #hero a:hover {
+            background-color: white;
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sections umum */
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #f5f5f5;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        article {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        article:hover img {
+            transform: scale(1.05);
+        }
+
+        article div {
+            padding: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        article p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .project-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        #contact p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        #contact a {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        #contact a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsivitas */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            #hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            #hero img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .project-links a {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#hero"><strong>Portofolio</strong></a>
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="profile-container">
+                    <img src="img/image.png" alt="Foto Profil [Nama Anda]">
+                </div>
+                <h1>Halo, saya Muhammad Andrian Putra Partoyo</h1>
+                <h2>Seorang Fresh Graduate S1 Teknik Informatika</h2>
+                <p>Selamat datang di portofolio pribadi saya. Di sini Anda dapat menemukan proyek-proyek yang pernah saya kerjakan dan informasi lebih lanjut tentang saya.</p>
+                <a href="#projects">Lihat Proyek Saya</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Saya adalah lulusan S1 teknik informatika dari Telkom Universitas Purwokerto. Saya memiliki keahlian dalam HTML, CSS, PHP, Dart dan berbagai framework modern seperti Laravel dan Flutter. Saya passionate dalam menciptakan pengalaman pengguna yang menarik dan fungsional. Saat ini saya sedang mengembangkan keterampilan dalam bidang Web Server.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Proyek Saya</h2>
+                <div class="projects-container">
+                    <article>
+                        <img src="img/LAB.png" alt="Gambar Proyek 1">
+                        <div>
+                            <h3>Aplikasi Lapak Aduan Banyumas</h3>
+                            <p>Aplikasi Mobile dengan implementasi dari website Lapak Aduan Banyumas yang sudah ada. Dibangun dengan Dart dan CSS.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/AndrianPutra14/Aplikasi-Mobile" target="_blank"><i class="fab fa-github"></i> Kode GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="img/Picture2.png" alt="Gambar Proyek 2">
+                        <div>
+                            <h3>Telkomedika Purwokerto</h3>
+                            <p>Aplikasi data pasien dengan mengelola dan mengkripsi data pasien . Dibangun dengan Framework Laravel dengan bahasa pemrograman PHP, HTML, CSS, serta penggunaan Algoritma Encryption Standard 256.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/AndrianPutra14/Website-telkomedika" target="_blank"><i class="fab fa-github"></i> Kode GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Hubungi Saya</h2>
+                <p>Saya selalu terbuka untuk diskusi, kolaborasi, atau peluang baru. Jangan ragu untuk menghubungi saya!</p>
+                <a href="javascript:void(0);"><i class="fas fa-envelope"></i> putrasmd363@gmail.com</a>
+                
+                <div class="social-links">
+                    <a href="https://github.com/AndrianPutra14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Andrian Putra Partoyo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
