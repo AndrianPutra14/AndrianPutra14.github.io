@@ -2,314 +2,419 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Andrian Putra | Mobile and Web Application Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrian Putra | Mobile & Web Developer</title>
+    <meta name="description" content="Professional portfolio of Andrian Putra - Flutter Developer specializing in mobile and web applications">
     <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Animated background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
 
-<!-- Particle background canvas -->
-<div id="particles-js"></div>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">Andrian Putra</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
 
-<!-- Custom cursor (optional elegance) -->
-<div class="custom-cursor"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient">Andrian Putra</span>
+                </h1>
+                <div class="typing-container">
+                    <h2 class="typing-text"></h2>
+                </div>
+                <p class="hero-description">
+                    Crafting exceptional mobile and web experiences with clean code and modern architecture. 
+                    Specializing in Flutter, REST APIs, and scalable solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/AndrianPutra14" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-andrian-putra-partoyo-a03b5a242/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/shenzbby?igsh=bmR2anYzOGU5a3do" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <div class="image-border"></div>
+                    <img src="assets/images/profile.jpg" alt="Andrian Putra" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-<header>
-    <div class="logo">
-         Portofolio 
-    </div>
-    <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="menu" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-</header>
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="lead">
+                        I'm a <strong class="highlight">Mobile and Web Application Developer</strong> 
+                        passionate about building impactful digital experiences.
+                    </p>
+                    <p>
+                        With experience in both internship and academic projects, I've developed 
+                        mobile and web applications that prioritize clean architecture, performance, 
+                        and maintainability. I stay current with the latest trends in Flutter and 
+                        modern web development.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Fresh Graduate in Informatics</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jakarta, Indonesia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open for freelance & collaborations</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary-outline">
+                        <i class="fas fa-paper-plane"></i> Let's Connect
+                    </a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Mobile Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Repositories</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="hero-container">
-        <div class="hero-left">
-            <div class="greeting-badge">Welcome to my Portofolio</div>
-            <h1>Hi, I'm <span class="gradient-text">Andrian Putra</span></h1>
-            <div class="dynamic-wrapper">
-                <h2 class="typing"></h2>
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
             </div>
-            <p class="hero-desc">
-                Dedicated to creating modern, scalable, and high-performance website and mobile applications. Experienced in REST API integration, PostgreSQL, and implementing clean code architecture.
-            </p>
-            <div class="hero-btn">
-                <button class="btn-primary" id="viewPortfolioBtn">
-                    <i class="fa-solid fa-folder-open"></i> View Projects
-                </button>
-                <button class="btn-outline" id="downloadCVBtn">
-                    <i class="fa-solid fa-download"></i> Download CV
-                </button>
-            </div>
-            <div class="social">
-                <a href="https://github.com/AndrianPutra14" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/muhammad-andrian-putra-partoyo-a03b5a242/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/shenzbby?igsh=bmR2anYzOGU5a3do" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fab fa-flutter"></i>
+                    </div>
+                    <h3 class="skill-name">Flutter</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fab fa-dart"></i>
+                    </div>
+                    <h3 class="skill-name">Dart</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">PostgreSQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="skill-name">REST API</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="92"></div>
+                    </div>
+                    <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">MySQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="skill-name">Git/GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="87"></div>
+                    </div>
+                    <span class="skill-percent">87%</span>
+                </div>
             </div>
         </div>
-        <div class="hero-right">
-            <div class="profile-wrapper">
-                <div class="profile-glow"></div>
-                <img src="assets/images/profile.jpg" alt="Andrian Putra" class="profile">
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <i class="fas fa-arrow-down"></i>
-    </div>
-</section>
+    </section>
 
-<!-- About Section - Enhanced -->
-<section id="about" class="reveal">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Get to know</span>
-            <h2>About Me</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="lead">Saya adalah <strong>Mobile and Web Application Developer</strong> dengan passion membangun pengalaman digital yang impactful.</p>
-                <p>Memiliki pengalaman mengembangkan berbagai proyek selama internship dan proyek kampus, termasuk aplikasi mobile dan web. Mengutamakan kode yang bersih, efisien, dan mudah dipelihara, serta aktif mengikuti perkembangan teknologi terbaru di ekosistem Flutter dan Laravel.</p>
-                <div class="info-list">
-                    <div><i class="fas fa-user-graduate"></i> <span>Fresh Graduate | Informatika</span></div>
-                    <div><i class="fas fa-map-marker-alt"></i> <span>Jakarta, Indonesia</span></div>
-                    <div><i class="fas fa-code"></i> <span>Available for freelance & collab</span></div>
-                </div>
-                <button class="btn-primary-outline" id="contactQuickBtn"><i class="fas fa-paper-plane"></i> Let's Talk</button>
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-divider"></div>
             </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>3+</h3>
-                    <p>Mobile Projects</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Flutter Developer</h3>
+                            <span class="timeline-company">@ PT Mega Gapura Perkasa</span>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="far fa-calendar"></i> 2025 - Present
+                        </div>
+                        <p class="timeline-description">
+                            Developing flight booking application with payment gateway integration (Midtrans) 
+                            and real-time tracking. Improved app performance by 35% through BLoC state 
+                            management optimization. Collaborated with backend team on REST API design.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Flutter</span>
+                            <span>BLoC</span>
+                            <span>REST API</span>
+                            <span>Payment Gateway</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <i class="fas fa-smile"></i>
-                    <h3>8+</h3>
-                    <p>Happy Clients</p>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Junior Mobile Developer</h3>
+                            <span class="timeline-company">@ Kominfo Purwokerto</span>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="far fa-calendar"></i> 2022 - 2024
+                        </div>
+                        <p class="timeline-description">
+                            Built "Lapak Aduan" citizen complaint app with real-time notifications 
+                            and image upload features. Responsible for maintenance and Play Store 
+                            deployment. Achieved 4.8/5 user rating.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Flutter</span>
+                            <span>SQLite</span>
+                            <span>Push Notifications</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>8+</h3>
-                    <p>Git Repos</p>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">UI/UX & Frontend Intern</h3>
+                            <span class="timeline-company">@ Kreasi Studio</span>
+                        </div>
+                        <div class="timeline-date">
+                            <i class="far fa-calendar"></i> 2021 - 2022
+                        </div>
+                        <p class="timeline-description">
+                            Designed interactive prototypes and implemented them as Flutter components. 
+                            Assisted in developing Telkomedika company profile website with modern animations.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Figma</span>
+                            <span>Flutter</span>
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Skills Section - Enhanced with icons & tooltips -->
-<section id="skills" class="reveal">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">My Arsenal</span>
-            <h2>Technical Skills</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="skills-container">
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fab fa-flutter"></i></div>
-                <p>Flutter</p>
-                <div class="bar"><div class="progress flutter" data-progress="90"></div></div>
-                <span class="percent">90%</span>
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Explore my latest work and open-source contributions</p>
             </div>
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fab fa-dart"></i></div>
-                <p>Dart</p>
-                <div class="bar"><div class="progress dart" data-progress="88"></div></div>
-                <span class="percent">88%</span>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded from JavaScript -->
             </div>
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fas fa-fire"></i></div>
-                <p>PostgreSQL</p>
-                <div class="bar"><div class="progress postgresql" data-progress="70"></div></div>
-                <span class="percent">70%</span>
-            </div>
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                <p>REST API</p>
-                <div class="bar"><div class="progress api" data-progress="92"></div></div>
-                <span class="percent">92%</span>
-            </div>
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <p>MySQL</p>
-                <div class="bar"><div class="progress sql" data-progress="80"></div></div>
-                <span class="percent">80%</span>
-            </div>
-            <div class="skill-card-single">
-                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                <p>Git/Github</p>
-                <div class="bar"><div class="progress git" data-progress="87"></div></div>
-                <span class="percent">87%</span>
+            <div class="projects-cta">
+                <a href="https://github.com/AndrianPutra14?tab=repositories" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fab fa-github"></i> View All on GitHub
+                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Experience Section - Enhanced Timeline -->
-<section id="experience" class="reveal">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Career Path</span>
-            <h2>Work Experience</h2>
-            <div class="divider"></div>
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>putrasmd363@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>github.com/AndrianPutra14</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/muhammad-andrian-putra</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+62 877 9911 2622</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-feedback" id="formFeedback"></div>
+                </form>
+            </div>
         </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Flutter Developer <span class="company">@ PT Mega Gapura Perkasa</span></h3>
-                    <span class="date"><i class="far fa-calendar-alt"></i> 2025 - Present</span>
-                    <p>Mengembangkan aplikasi booking tiket pesawat dengan integrasi payment gateway (Midtrans) dan real-time tracking. Meningkatkan performa aplikasi hingga 35% dengan optimalisasi state management (Bloc). Kolaborasi dengan tim backend untuk REST API design.</p>
-                    <div class="tech-stack">Flutter • BLoC • REST API • Payment Gateway</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Junior Mobile Developer <span class="company">@ Kominfo Purowkerto</span></h3>
-                    <span class="date"><i class="far fa-calendar-alt"></i> 2022 - 2024</span>
-                    <p>Membangun aplikasi "Lapak Aduan" untuk pengaduan masyarakat dengan fitur realtime notifikasi dan upload gambar. Bertanggung jawab dalam maintenance dan deployment ke Play Store. Mendapatkan rating 4.8/5 dari user.</p>
-                    <div class="tech-stack">Flutter • SQLite </div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>UI/UX & Frontend Intern <span class="company">@ Kreasi Studio</span></h3>
-                    <span class="date"><i class="far fa-calendar-alt"></i> 2021 - 2022</span>
-                    <p>Mendesain prototype interaktif dan mengimplementasikan ke dalam komponen Flutter. Membantu pengembangan company profile website Telkomedika dengan animasi modern.</p>
-                    <div class="tech-stack">Figma • Flutter • HTML/CSS • JavaScript</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Projects Section - Enhanced with details and tags -->
-<section id="projects" class="reveal">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Recent Works</span>
-            <h2>Featured Projects</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img"><i class="fas fa-plane-departure"></i></div>
-                <h3>Ezytix - Flight Booking</h3>
-                <p>Aplikasi pemesanan tiket pesawat real-time dengan dukungan multi-payment gateway, filter harga, dan e-ticket generation. Built with Flutter.</p>
-                <div class="project-tags">Flutter • Payment Gateway • REST API</div>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Andrian Putra</span>
+                    <span class="footer-tagline">Building digital experiences with passion</span>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-img"><i class="fas fa-exclamation-triangle"></i></div>
-                <h3>Lapak Aduan Masyarakat</h3>
-                <p>Platform digital untuk pelaporan keluhan masyarakat dengan tracking status, notifikasi push, dan dashboard admin. Digunakan oleh 500+ pengguna aktif.</p>
-                <div class="project-tags">SQLite • Flutter • Auth</div>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Live</a>
+                <div class="footer-social">
+                    <a href="https://github.com/AndrianPutra14" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-andrian-putra-partoyo-a03b5a242/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/shenzbby?igsh=bmR2anYzOGU5a3do" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:putrasmd363@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-img"><i class="fas fa-hospital-user"></i></div>
-                <h3>Telkomedika Health</h3>
-                <p>Company profile modern untuk layanan kesehatan dengan animasi interaktif, jadwal dokter, dan artikel kesehatan. Responsif di berbagai device.</p>
-                <div class="project-tags">Laravel Web • Responsive • MySQL</div>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Website</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-img"><i class="fas fa-chart-line"></i></div>
-                <h3>Expense Tracker App</h3>
-                <p>Aplikasi manajemen keuangan pribadi dengan visualisasi grafik, kategori pengeluaran, dan laporan bulanan. Menggunakan Hive database lokal.</p>
-                <div class="project-tags">Hive • Flutter • Charts • GetX</div>
-                <div class="project-links">
-                    <a href="#"><i class="fab fa-github"></i> Code</a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Andrian Putra. All rights reserved.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Contact Section - Enhanced form and info -->
-<section id="contact" class="reveal">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Get In Touch</span>
-            <h2>Let's Work Together</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-detail">
-                    <i class="fas fa-envelope"></i>
-                    <div><h4>Email Me</h4><p>putrasmd363@gmail.com</p></div>
-                </div>
-                <div class="contact-detail">
-                    <i class="fab fa-github"></i>
-                    <div><h4>GitHub</h4><p>github.com/AndrianPutra14</p></div>
-                </div>
-                <div class="contact-detail">
-                    <i class="fab fa-linkedin"></i>
-                    <div><h4>LinkedIn</h4><p>https://www.linkedin.com/in/muhammad-andrian-putra-partoyo-a03b5a242/</p></div>
-                </div>
-                <div class="contact-detail">
-                    <i class="fas fa-phone-alt"></i>
-                    <div><h4>Phone</h4><p>+6287799112622</p></div>
-                </div>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="5" placeholder="Your Message..."></textarea>
-                <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
-                <p class="form-message" id="formFeedback"></p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">Andrian Putra<span>.</span></div>
-        <p>Flutter Developer — Creating seamless mobile experiences with clean code and passion.</p>
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="copyright">
-            <p>© 2025 Andrian Putra. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
